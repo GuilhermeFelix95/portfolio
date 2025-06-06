@@ -1,0 +1,27 @@
+/* Media Query para aplicar estes estilos apenas em telas de até 768px de largura */
+@media (max-width: 768px) {
+    .container { padding: 0 1.5rem; }
+
+    /* Cabeçalho */
+    .cabecalho .container { flex-direction: column; gap: 1rem; }
+    .navegacao ul { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    
+    /* Hero */
+    #inicio { padding: 6rem 0; min-height: auto; }
+    .hero-container { flex-direction: column-reverse; text-align: center; gap: 3rem; }
+    .hero-texto { max-width: 100%; }
+    .hero-texto h1 { font-size: 2.5rem; }
+    .hero-imagem { max-width: 220px; }
+
+    /* Seções e Cards */
+    .secao { padding: 4rem 0; }
+    .titulo-secao { font-size: 2rem; }
+    .grid-cards { grid-template-columns: 1fr; }
+
+    /* Modal no Mobile */
+    #modal-container { padding: 2.5rem 1.5rem; width: 95%; }
+    #modal-title { font-size: 1.5rem; }
+
+    /* Botão Voltar ao Topo no Mobile */
+    #back-to-top { bottom: 1rem; right: 1rem; width: 45px; height: 45px; }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Felix Ferreira | Desenvolvedor</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com Logo e Navegação -->
+    <header class="cabecalho">
+        <div class="container">
+            <a href="#inicio" class="logo">Guilherme<span>.</span>dev</a>
+            <nav class="navegacao">
+                <ul>
+                    <!-- Note a classe 'nav-link' para facilitar a seleção no JS -->
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Seções agora têm o atributo 'data-section' para o menu inteligente -->
+        <section id="inicio" class="secao" data-section="inicio">
+            <div class="container hero-container">
+                <div class="hero-texto">
+                    <h1>Guilherme Felix Ferreira</h1>
+                    <p class="subtitulo-animado">Desenvolvedor Criando Soluções Tecnológicas</p>
+                    <a href="#projetos" class="btn-principal">Ver Projetos</a>
+                </div>
+                <div class="hero-imagem">
+                    <img src="img.png" alt="Foto de Guilherme Felix Ferreira">
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="secao" data-section="sobre">
+            <div class="container">
+                <h2 class="titulo-secao">Sobre Mim</h2>
+                <p>
+                    Olá, sou Guilherme Felix Ferreira, um desenvolvedor apaixonado por tecnologia e inovação. Atualmente, estou cursando Desenvolvimento de Sistemas, com especialização em JavaScript e planos de aprofundamento em Python. Minha jornada na programação vai além dos estudos—já apliquei minhas habilidades no mundo real ao criar um sistema para minha empresa de degelo, ajudando no controle de exposição ao frio.
+                    Acredito que a tecnologia tem o poder de transformar realidades e otimizar processos. Sou um entusiasta sempre explorando novas ferramentas para entregar soluções inovadoras.
+                </p>
+            </div>
+        </section>
+
+        <section id="habilidades" class="secao" data-section="habilidades">
+            <div class="container">
+                <h2 class="titulo-secao">Habilidades</h2>
+                <div class="grid-cards">
+                    <!-- Cards de Habilidade -->
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-brands fa-js-square"></i></div>
+                        <h3>JavaScript</h3>
+                        <p>Desenvolvimento dinâmico e interativo para criar experiências ricas no front-end.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-brands fa-python"></i></div>
+                        <h3>Python (em breve!)</h3>
+                        <p>Expandindo meu conhecimento para novas soluções em backend e análise de dados.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-sitemap"></i></div>
+                        <h3>Sistemas Empresariais</h3>
+                        <p>Criando ferramentas para otimizar e melhorar processos corporativos do dia a dia.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>Entusiasmo Tech</h3>
+                        <p>Sempre explorando tendências, frameworks e inovações para estar na vanguarda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="secao" data-section="projetos">
+            <div class="container">
+                <h2 class="titulo-secao">Projetos</h2>
+                <div class="grid-cards">
+                    <!-- Cards de Projeto agora têm data-attributes e um botão -->
+                    <div class="card card-projeto" 
+                         data-title="Controle de Exposição ao Frio"
+                         data-details="Este sistema foi desenvolvido utilizando JavaScript puro para o front-end, com o objetivo de monitorar e registrar o tempo que cada funcionário passa em ambientes de baixa temperatura. A interface permite o início e fim de cada sessão de degelo, armazenando os dados localmente no navegador e alertando sobre os limites de tempo de exposição para garantir a conformidade com as normas de segurança do trabalho.">
+                        <div class="card-icon"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+                        <h3>Controle de Exposição ao Frio</h3>
+                        <p>Sistema para garantir segurança e eficiência no ambiente de degelo.</p>
+                        <a href="#" class="btn-detalhes">Ver Detalhes</a>
+                    </div>
+                    <div class="card card-projeto"
+                         data-title="Portfólio Pessoal"
+                         data-details="Meu portfólio pessoal, a página que você está vendo agora! Desenvolvido com HTML5, CSS3 e JavaScript. Utilizei Intersection Observer para animações de scroll, manipulação do DOM para criar o modal de projetos e o menu de navegação inteligente. O design é totalmente responsivo, adaptando-se a desktops e dispositivos móveis.">
+                        <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3>Portfólio Pessoal</h3>
+                        <p>Uma página moderna e interativa para apresentar minhas habilidades e projetos.</p>
+                        <a href="#" class="btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="secao" data-section="contato">
+            <div class="container">
+                <h2 class="titulo-secao">Vamos Conversar?</h2>
+                <p>Interessado em tecnologia, projetos e inovação? Entre em contato e descubra como posso contribuir.</p>
+                <a href="mailto:guilhermefelixgf95@gmail.com" class="btn-principal">Enviar um E-mail</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2024 Guilherme Felix Ferreira. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Estrutura do Modal (inicialmente oculta) -->
+    <div id="modal-overlay" class="hidden">
+        <div id="modal-container">
+            <button id="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <h3 id="modal-title">Título do Projeto</h3>
+            <p id="modal-details">Detalhes do projeto aqui...</p>
+        </div>
+    </div>
+
+    <!-- Botão Voltar ao Topo (inicialmente oculto) -->
+    <a href="#inicio" id="back-to-top" class="hidden"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="js/index.js" defer></script>
+</body>
+</html>
