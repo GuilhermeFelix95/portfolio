@@ -24,7 +24,7 @@ body { font-family: var(--fonte-principal); background-color: var(--cor-fundo); 
 .logo span { color: var(--cor-primaria); }
 .navegacao ul { list-style: none; display: flex; gap: 1.5rem; }
 .navegacao a { text-decoration: none; color: var(--cor-texto-secundario); font-weight: 600; transition: color 0.3s ease; }
-.navegacao a:hover, .navegacao a.active { color: var(--cor-primaria); } /* Estilo para link ativo */
+.navegacao a:hover, .navegacao a.active { color: var(--cor-primaria); }
 
 /* --- Seção de Apresentação (Hero) --- */
 main { padding-top: 80px; }
@@ -42,11 +42,21 @@ main { padding-top: 80px; }
 .titulo-secao { font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: var(--cor-texto-principal); }
 #sobre p { max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; color: var(--cor-texto-secundario); }
 
-/* --- Cards (Habilidades e Projetos) --- */
+/* --- Seção de Habilidades com Barras de Progresso --- */
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.skill-item { display: flex; flex-direction: column; gap: 0.5rem; }
+.skill-info { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
+.skill-icon { font-size: 1.5rem; color: var(--cor-primaria); margin-right: 10px; }
+.skill-name { font-size: 1.1rem; font-weight: 600; color: var(--cor-texto-principal); }
+.skill-bar-container { width: 100%; background-color: var(--cor-fundo-card); border-radius: 5px; height: 20px; border: 1px solid var(--cor-borda); overflow: hidden; }
+.skill-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria)); border-radius: 5px; transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); display: flex; align-items: center; justify-content: flex-end; }
+.skill-bar span { padding: 0 10px; font-size: 0.8rem; font-weight: 700; color: var(--cor-fundo); opacity: 0; transition: opacity 0.5s ease 1s; }
+.skill-bar.animated span { opacity: 1; }
+
+/* --- Cards (Projetos) --- */
 .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 .card { background-color: var(--cor-fundo-card); padding: 2.5rem 2rem; border-radius: 8px; border: 1px solid var(--cor-borda); position: relative; overflow: hidden; transition: transform 0.3s ease; }
 .card:hover { transform: translateY(-8px); }
-/* Efeito de brilho no hover */
 .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(56, 189, 248, 0.2), transparent 40%); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
 .card:hover::before { opacity: 1; }
 .card-icon { font-size: 2rem; color: var(--cor-primaria); margin-bottom: 1rem; }
@@ -71,4 +81,3 @@ main { padding-top: 80px; }
 .btn-principal { display: inline-block; background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria)); color: var(--cor-texto-principal); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; border: none; transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .btn-principal:hover { transform: scale(1.05); box-shadow: var(--sombra-glow); }
 .rodape { background-color: #1f2937; text-align: center; padding: 2rem 0; margin-top: 4rem; border-top: 1px solid var(--cor-borda); }
-s

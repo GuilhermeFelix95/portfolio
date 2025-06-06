@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3clinearGradient id='iconGradient' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3e%3cstop offset='0%25' style='stop-color:%2338bdf8' /%3e%3cstop offset='100%25' style='stop-color:%23818cf8' /%3e%3c/linearGradient%3e%3c/defs%3e%3crect width='64' height='64' rx='12' fill='%23111827'/%3e%3cpath d='M48 32C48 40.8366 40.8366 48 32 48C23.1634 48 16 40.8366 16 32C16 23.1634 23.1634 16 32 16C36.4183 16 40 19.5817 40 24' stroke='url(%23iconGradient)' stroke-width='6' stroke-linecap='round'/%3e%3cpath d='M40 32H30 M40 24V40' stroke='%23f9fafb' stroke-width='6' stroke-linecap='round'/%3e%3c/svg%3e">
+
     <link rel="stylesheet" href="css/desktop.css">
     <link rel="stylesheet" href="css/mobile.css">
 </head>
@@ -21,7 +24,6 @@
             <a href="#inicio" class="logo">Guilherme<span>.</span>dev</a>
             <nav class="navegacao">
                 <ul>
-                    <!-- Note a classe 'nav-link' para facilitar a seleção no JS -->
                     <li><a href="#sobre" class="nav-link">Sobre</a></li>
                     <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
                     <li><a href="#projetos" class="nav-link">Projetos</a></li>
@@ -33,7 +35,6 @@
 
     <main>
 
-        <!-- Seções agora têm o atributo 'data-section' para o menu inteligente -->
         <section id="inicio" class="secao" data-section="inicio">
             <div class="container hero-container">
                 <div class="hero-texto">
@@ -57,31 +58,62 @@
             </div>
         </section>
 
+        <!-- Seção de Habilidades com Barras de Progresso -->
         <section id="habilidades" class="secao" data-section="habilidades">
             <div class="container">
-                <h2 class="titulo-secao">Habilidades</h2>
-                <div class="grid-cards">
-                    <!-- Cards de Habilidade -->
-                    <div class="card">
-                        <div class="card-icon"><i class="fa-brands fa-js-square"></i></div>
-                        <h3>JavaScript</h3>
-                        <p>Desenvolvimento dinâmico e interativo para criar experiências ricas no front-end.</p>
+                <h2 class="titulo-secao">Minhas Habilidades</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="fab fa-html5 skill-icon"></i>
+                            <span class="skill-name">HTML</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-percentage="80"><span>80%</span></div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fa-brands fa-python"></i></div>
-                        <h3>Python (em breve!)</h3>
-                        <p>Expandindo meu conhecimento para novas soluções em backend e análise de dados.</p>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="fab fa-css3-alt skill-icon"></i>
+                            <span class="skill-name">CSS</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-percentage="80"><span>80%</span></div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fa-solid fa-sitemap"></i></div>
-                        <h3>Sistemas Empresariais</h3>
-                        <p>Criando ferramentas para otimizar e melhorar processos corporativos do dia a dia.</p>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="fab fa-js-square skill-icon"></i>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-percentage="80"><span>80%</span></div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
-                        <h3>Entusiasmo Tech</h3>
-                        <p>Sempre explorando tendências, frameworks e inovações para estar na vanguarda.</p>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="fas fa-chart-line skill-icon"></i>
+                            <span class="skill-name">MQL4</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-percentage="90"><span>90%</span></div>
+                        </div>
                     </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="fab fa-python skill-icon"></i>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-percentage="10"><span>10%</span></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -90,7 +122,6 @@
             <div class="container">
                 <h2 class="titulo-secao">Projetos</h2>
                 <div class="grid-cards">
-                    <!-- Cards de Projeto agora têm data-attributes e um botão -->
                     <div class="card card-projeto" 
                          data-title="Controle de Exposição ao Frio"
                          data-details="Este sistema foi desenvolvido utilizando JavaScript puro para o front-end, com o objetivo de monitorar e registrar o tempo que cada funcionário passa em ambientes de baixa temperatura. A interface permite o início e fim de cada sessão de degelo, armazenando os dados localmente no navegador e alertando sobre os limites de tempo de exposição para garantir a conformidade com as normas de segurança do trabalho.">
@@ -121,14 +152,12 @@
 
     </main>
 
-    <!-- Rodapé -->
     <footer class="rodape">
         <div class="container">
             <p>&copy; 2024 Guilherme Felix Ferreira. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- Estrutura do Modal (inicialmente oculta) -->
     <div id="modal-overlay" class="hidden">
         <div id="modal-container">
             <button id="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
@@ -137,7 +166,6 @@
         </div>
     </div>
 
-    <!-- Botão Voltar ao Topo (inicialmente oculto) -->
     <a href="#inicio" id="back-to-top" class="hidden"><i class="fa-solid fa-arrow-up"></i></a>
 
     <script src="js/index.js" defer></script>

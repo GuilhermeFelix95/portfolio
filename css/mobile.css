@@ -16,7 +16,9 @@
     /* Seções e Cards */
     .secao { padding: 4rem 0; }
     .titulo-secao { font-size: 2rem; }
-    .grid-cards { grid-template-columns: 1fr; }
+    
+    /* Habilidades e Projetos em uma coluna */
+    .skills-grid, .grid-cards { grid-template-columns: 1fr; }
 
     /* Modal no Mobile */
     #modal-container { padding: 2.5rem 1.5rem; width: 95%; }
